@@ -26,9 +26,13 @@
  *
  */
 fun main() {
+    println("Digite um número inteiro:")
+    val num1 = readLine()!!.toInt()
 
-    // EXECUTE AQUI MÉTODO DE LOGICA DO EXERCICIO
+    println("Digite outro número inteiro:")
+    val num2 = readLine()!!.toInt()
 
+    println(ExerciseOne().logicExerciseOne(num1, num2))
 }
 
 /**
@@ -44,8 +48,11 @@ class ExerciseOne {
      * @return retorna valor string com resultado do desafio.
      */
     fun logicExerciseOne(valueOne: Int, valueTwo: Int): String {
-        // LOGICA DO EXERCICIO
-        return ""
+        val soma = valueOne + valueTwo
+        return if(soma % 2 == 0)
+            "A soma de $valueOne + $valueTwo é par"
+        else
+            "A soma de $valueOne + $valueTwo é ímpar"
     }
 
 }

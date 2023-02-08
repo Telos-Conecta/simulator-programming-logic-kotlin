@@ -25,9 +25,16 @@
  *
  */
 fun main() {
+    println("Digite o primeiro número:")
+    val num1 = readLine()!!.toInt()
 
-    // EXECUTE AQUI MÉTODO DE LOGICA DO EXERCICIO
+    println("Digite o segundo número:")
+    val num2 = readLine()!!.toInt()
 
+    println("Digite o terceiro número:")
+    val num3 = readLine()!!.toInt()
+
+    println(ExerciseFour().logicExerciseFour(num1, num2, num3))
 }
 
 
@@ -45,7 +52,12 @@ class ExerciseFour {
      * @return retorna valor string com resultado do desafio.
      */
     fun logicExerciseFour(valueOne: Int, valueTwo: Int, valueThree: Int): String {
-        // LOGICA DO EXERCICIO
-        return ""
+        return if (valueOne > valueTwo && valueOne > valueThree){
+            "$valueOne é o maior número"
+        } else if (valueTwo > valueOne && valueTwo > valueThree){
+            "$valueTwo é o maior número"
+        } else {
+            "$valueThree é o maior número"
+        }
     }
 }

@@ -25,9 +25,16 @@
  *
  */
 fun main() {
+    println("Digite o primeiro número:")
+    val num1 = readLine()!!.toInt()
 
-    // EXECUTE AQUI MÉTODO DE LOGICA DO EXERCICIO
+    println("Digite o segundo número:")
+    val num2 = readLine()!!.toInt()
 
+    println("Digite o terceiro número:")
+    val num3 = readLine()!!.toInt()
+
+    println(ExerciseFive().logicExerciseFive(num1, num2, num3))
 }
 
 
@@ -45,8 +52,8 @@ class ExerciseFive {
      * @return retorna valor string com resultado do desafio.
      */
     fun logicExerciseFive(valueOne: Int, valueTwo: Int, valueThree: Int): String {
-        // LOGICA DO EXERCICIO
-        return ""
+        val minValue = minOf(valueOne, valueTwo, valueThree)
+        return "O menor número é: $minValue"
     }
 
 }

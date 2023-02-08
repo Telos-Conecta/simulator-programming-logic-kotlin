@@ -25,9 +25,13 @@
  *
  */
 fun main() {
+    println("Digite um número inteiro:")
+    val num1 = readLine()!!.toInt()
 
-    // EXECUTE AQUI MÉTODO DE LOGICA DO EXERCICIO
+    println("Digite outro número inteiro:")
+    val num2 = readLine()!!.toInt()
 
+    println(ExerciseThree().logicExerciseThree(num1, num2))
 }
 
 /**
@@ -43,8 +47,13 @@ class ExerciseThree {
      * @return retorna valor string com resultado do desafio.
      */
     fun logicExerciseThree(valueOne: Int, valueTwo: Int): String {
-        // LOGICA DO EXERCICIO
-        return ""
+        return if(valueOne > valueTwo){
+            "O primeiro número é o maior: $valueOne"
+        } else if(valueTwo > valueOne){
+            "O segundo número é o maior: $valueTwo"
+        } else{
+            "Os números $valueOne, $valueTwo são iguais"
+        }
     }
 
 }

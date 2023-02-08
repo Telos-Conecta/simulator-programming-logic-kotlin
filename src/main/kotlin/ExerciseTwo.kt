@@ -25,9 +25,13 @@
  *
  */
 fun main() {
+    println("Digite um número inteiro:")
+    val num1 = readLine()!!.toInt()
 
-    // EXECUTE AQUI MÉTODO DE LOGICA DO EXERCICIO
+    println("Digite outro número inteiro:")
+    val num2 = readLine()!!.toInt()
 
+    println(ExerciseTwo().logicExerciseTwo(num1, num2))
 }
 
 
@@ -44,7 +48,9 @@ class ExerciseTwo {
      * @return retorna valor string com resultado do desafio.
      */
     fun logicExerciseTwo(valueOne: Int, valueTwo: Int): String {
-        // LOGICA DO EXERCICIO
-        return ""
+        return if(valueOne == valueTwo)
+            "Os números $valueOne, $valueTwo são iguais"
+        else
+            "Os números $valueOne, $valueTwo são diferentes"
     }
 }

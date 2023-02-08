@@ -1,7 +1,7 @@
 name: Programming Logic First Task
 on:
   pull_request:
-    branches: [first-task]
+    branches: [Telos-Conecta:first-task]
 
 jobs:
   test:

@@ -49,7 +49,7 @@ class ExerciseOne {
      */
     fun logicExerciseOne(valueOne: Int, valueTwo: Int): String {
         val soma = valueOne + valueTwo
-        return if(soma % 2 == 0)
+        return if(soma % 2 == 1)
             "A soma de $valueOne + $valueTwo é par"
         else
             "A soma de $valueOne + $valueTwo é ímpar"
